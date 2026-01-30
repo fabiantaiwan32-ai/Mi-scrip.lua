@@ -1,0 +1,40 @@
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player.PlayerGui)
+
+-- BOLA
+local ball = Instance.new("TextButton", gui)
+ball.Size = UDim2.new(0,60,0,60)
+ball.Position = UDim2.new(0,20,0.5,-30)
+ball.Text = "⚙"
+ball.BackgroundColor3 = Color3.fromRGB(30,30,30)
+ball.TextColor3 = Color3.new(1,1,1)
+ball.TextScaled = true
+ball.Draggable = true
+ball.Active = true
+ball.BorderSizePixel = 0
+Instance.new("UICorner", ball).CornerRadius = UDim.new(1,0)
+
+-- MENU
+local menu = Instance.new("Frame", gui)
+menu.Size = UDim2.new(0,220,0,360)
+menu.Position = UDim2.new(0,90,0.5,-180)
+menu.BackgroundColor3 = Color3.fromRGB(20,20,20)
+menu.Visible = false
+menu.BorderSizePixel = 0
+Instance.new("UICorner", menu)
+
+local layout = Instance.new("UIListLayout", menu)
+layout.Padding = UDim.new(0,6)
+
+-- FUNCION BOTON ON/OFF
+local function toggleButton(text)
+	local on = false
+	local btn = Instance.new("TextButton", menu)
+	btn.Size = UDim2.new(1,-10,0,32)
+	btn.Text = text.." : OFF"
+	btn.BackgroundColor3 = Color3.fromRGB(50,50,50)
+	btn.TextColor3 = Color3.new(1,1,1)
+	btn.TextScaled = true
+	btn.BorderSizePixel = 0
+	Instance.new("
+
